@@ -8,7 +8,7 @@ This is the scoring script for SemEval-2018 Task 3: Irony detection in English t
 The script:
   * is used to evaluate Task A and Task B
   * takes as input a submission dir containing the system output (format: 1 prediction per line)
-  * prediction files should be named 'predictions-taskA.txt' and/or 'predictions-taskB.txt'
+  * prediction files should be named 'predictions-TaskA.txt' and/or 'predictions-taskB.txt'
   * calculates accuracy, precision, recall and F1-score.
 
 Date: 08.08.2017, adapted on 26.09.2017
@@ -27,7 +27,7 @@ def score(input_dir, output_dir):
         if el.startswith('predictions'):
             submission_file.append(el)
     if not len(submission_file) == 1:
-       print ("Warning: the submission folder should only contain 1 file ('predictions-taskA.txt' or 'predictions-taskB.txt'). Process terminated.")
+       print ("Warning: the submission folder should only contain 1 file ('predictions-TaskA.txt' or 'predictions-taskB.txt'). Process terminated.")
        sys.exit()
     submission_file_name = submission_file[0]
     submission_path = os.path.join(submission_dir, submission_file_name)
